@@ -1,0 +1,154 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#app {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.level-1 {
+    background-color: #f8bcd4;
+    /* Pastel Pink */
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.level-2 {
+    background-color: #bde4f8;
+    /* Pastel Blue */
+    padding: 15px;
+    margin-bottom: 8px;
+}
+
+.level-3 {
+    background-color: #d9f8c4;
+    /* Pastel Green */
+    padding: 10px;
+    margin-bottom: 6px;
+}
+
+.level-4 {
+    background-color: #f8e9a1;
+    /* Pastel Yellow */
+    padding: 5px;
+    margin-bottom: 4px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.table-container {
+    width: 100%;
+    /* or any specific width */
+    height: 400px;
+    /* or any specific height */
+    overflow: auto;
+    /* Adds scrollbars automatically */
+    border: 1px solid #ddd;
+    /* Optional: adds a border around the container */
+}
+
+.wikitable {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Add the rest of your table styling here */
+
+
+.wikitable {
+    border-collapse: collapse;
+    /* Makes borders between rows and cells collapse into a single border */
+    width: 100%;
+    /* Sets the width of the table to fill the container */
+    font-family: Arial, sans-serif;
+    /* Sets a clean, readable font */
+}
+
+.wikitable th,
+.wikitable td {
+    border: 1px solid #a2a9b1;
+    /* Sets border color for table headers and cells */
+    padding: 8px;
+    /* Adds padding inside table headers and cells for better readability */
+    text-align: center;
+    /* Centers text in table headers and cells */
+    vertical-align: middle;
+    /* Aligns content in the middle vertically */
+}
+
+.wikitable th {
+    background-color: #f8f9fa;
+    /* Sets a light background color for table headers */
+    color: #000;
+    /* Sets the text color for table headers */
+}
+
+.wikitable tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Sets a zebra striping effect for rows */
+}
+
+.wikitable tr:hover {
+    background-color: #ddd;
+    /* Adds a hover effect to highlight rows on mouse over */
+}
+
+.wikitable .sortbottom {
+    background-color: #fff;
+    /* Sets a different background color for the summary row */
+    font-weight: bold;
+    /* Makes the summary row text bold */
+}
+
+.wikitable .reference a {
+    text-decoration: none;
+    /* Removes underline from references */
+    color: #0645ad;
+    /* Sets the color of reference links */
+}
+
+.unsortable::after {
+    content: "";
+    /* Removes sorting indicators from unsortable columns */
+}
+
+#context-menu {
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    flex-direction: column;
+
+    width: 200px;
+    background-color: gainsboro;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#context-menu li {
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+}

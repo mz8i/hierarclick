@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HierarClick - Enhanced Contextual Navigation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <menu type="context" id="context-menu">
+        <li class="tag-name" label="Tag Name">---</li>
+        <li id="menu-item-2" label="Option 2">Cut</li>
+        <li id="menu-item-3" label="Option 3">More</li>
+        <li id="menu-item-1" label="Option 1">Copy</li>
+    </menu>
+    <div id="app" class="app">
+
+        <h1 class="h1">HierarClick Prototype</h1>
+        <div class="level-1">
+            Level 1
+            <div class="level-2">
+                Level 2
+                <div class="level-3">
+                    Level 3
+                    <div class="level-4">
+                        Level 4
+                        <p class="p-4">Sample text inside Level 4</p>
+                    </div>
+                    <p class="p-3">Sample text inside Level 3</p>
+                </div>
+                <p class="p-2">Sample text inside Level 2</p>
+            </div>
+            <p class="p-1">Sample text outside but still within Level 1</p>
+        </div>
+        <div class="table-container">
+            <table class="wikitable sortable jquery-tablesorter" style="width: 100%; text-align:center">
+                <thead>
+                    <tr>
+                        <th rowspan="2" width="5" class="unsortable">Herb
+                        </th>
+                        <th rowspan="2" width="5" class="unsortable">Flaga
+                        </th>
+                        <th rowspan="2" width="95" class="headerSort" tabindex="0" role="columnheader button"
+                            title="Sortuj rosnąco">Województwo
+                        </th>
+                        <th rowspan="2" width="25" class="headerSort" tabindex="0" role="columnheader button"
+                            title="Sortuj rosnąco">Siedziba władz
+                        </th>
+                        <th rowspan="2" width="25" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">Powierz<br>chnia<br>w km²
+                        </th>
+                        <th rowspan="2" width="25" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">Ludność<br>(30 VI 2023)
+                        </th>
+                        <th rowspan="2" width="25" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">Gęstość<br>zaludn.<br>na km²
+                        </th>
+                        <th rowspan="2" width="25" class="headerSort" tabindex="0" role="columnheader button"
+                            title="Sortuj rosnąco">Miasta<sup id="cite_ref-5" class="reference"><a
+                                    href="#cite_note-5">[4]</a></sup>
+                        </th>
+                        <th colspan="2">II stopień adm.
+                        </th>
+                        <th colspan="4">Gminy
+                        </th>
+                    </tr>
+                    <tr>
+                        <th width="50" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">powiaty
+                        </th>
+                        <th width="50" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">m. na prawach powiatu
+                        </th>
+                        <th width="50" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">ogółem
+                        </th>
+                        <th width="50" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">miejskie
+                        </th>
+                        <th width="50" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">miejsko-wiejskie
+                        </th>
+                        <th width="50" data-sort-type="number" class="headerSort" tabindex="0"
+                            role="columnheader button" title="Sortuj rosnąco">wiejskie
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_dolno%C5%9Bl%C4%85skiego"
+                                    title="Herb województwa dolnośląskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_dolno%C5%9Bl%C4%85skiego"
+                                    title="Flaga województwa dolnośląskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_dolno%C5%9Bl%C4%85skie"
+                                title="Województwo dolnośląskie">dolnośląskie</a>
+                        </td>
+                        <td><a href="/wiki/Wroc%C5%82aw" title="Wrocław">Wrocław</a>
+                        </td>
+                        <td>19 946,70
+                        </td>
+                        <td>2 883 133
+                        </td>
+                        <td>144,54
+                        </td>
+                        <td>93
+                        </td>
+                        <td>26
+                        </td>
+                        <td>4
+                        </td>
+                        <td>169
+                        </td>
+                        <td>35
+                        </td>
+                        <td>58
+                        </td>
+                        <td>76
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_kujawsko-pomorskiego"
+                                    title="Herb województwa kujawsko-pomorskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_kujawsko-pomorskiego"
+                                    title="Flaga województwa kujawsko-pomorskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_kujawsko-pomorskie"
+                                title="Województwo kujawsko-pomorskie">kujawsko-pomorskie</a>
+                        </td>
+                        <td><a href="/wiki/Bydgoszcz" title="Bydgoszcz">Bydgoszcz</a> i&nbsp;<a href="/wiki/Toru%C5%84"
+                                title="Toruń">Toruń</a>
+                        </td>
+                        <td>17 971,34
+                        </td>
+                        <td>2 001 670
+                        </td>
+                        <td>111,38
+                        </td>
+                        <td>56
+                        </td>
+                        <td>19
+                        </td>
+                        <td>4
+                        </td>
+                        <td>144
+                        </td>
+                        <td>17
+                        </td>
+                        <td>39
+                        </td>
+                        <td>88
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_lubelskiego"
+                                    title="Herb województwa lubelskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_lubelskiego"
+                                    title="Flaga województwa lubelskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_lubelskie" title="Województwo lubelskie">lubelskie</a>
+                        </td>
+                        <td><a href="/wiki/Lublin" title="Lublin">Lublin</a>
+                        </td>
+                        <td>25 122,46
+                        </td>
+                        <td>2 017 807
+                        </td>
+                        <td>80,32
+                        </td>
+                        <td>54
+                        </td>
+                        <td>20
+                        </td>
+                        <td>4
+                        </td>
+                        <td>213
+                        </td>
+                        <td>20
+                        </td>
+                        <td>34
+                        </td>
+                        <td>159
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_lubuskiego"
+                                    title="Herb województwa lubuskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_lubuskiego"
+                                    title="Flaga województwa lubuskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_lubuskie" title="Województwo lubuskie">lubuskie</a>
+                        </td>
+                        <td><a href="/wiki/Gorz%C3%B3w_Wielkopolski" title="Gorzów Wielkopolski">Gorzów Wielkopolski</a>
+                            i&nbsp;<a href="/wiki/Zielona_G%C3%B3ra" title="Zielona Góra">Zielona Góra</a>
+                        </td>
+                        <td>13 987,93
+                        </td>
+                        <td>977 493
+                        </td>
+                        <td>69,88
+                        </td>
+                        <td>44
+                        </td>
+                        <td>12
+                        </td>
+                        <td>2
+                        </td>
+                        <td>82
+                        </td>
+                        <td>9
+                        </td>
+                        <td>35
+                        </td>
+                        <td>38
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_%C5%82%C3%B3dzkiego"
+                                    title="Herb województwa łódzkiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_%C5%82%C3%B3dzkiego"
+                                    title="Flaga województwa łódzkiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_%C5%82%C3%B3dzkie" title="Województwo łódzkie">łódzkie</a>
+                        </td>
+                        <td><a href="/wiki/%C5%81%C3%B3d%C5%BA" title="Łódź">Łódź</a>
+                        </td>
+                        <td>18 218,95
+                        </td>
+                        <td>2 370 370
+                        </td>
+                        <td>130,10
+                        </td>
+                        <td>60
+                        </td>
+                        <td>21
+                        </td>
+                        <td>3
+                        </td>
+                        <td>177
+                        </td>
+                        <td>18
+                        </td>
+                        <td>42
+                        </td>
+                        <td>117
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_dolno%C5%9Bl%C4%85skiego"
+                                    title="Herb województwa dolnośląskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_dolno%C5%9Bl%C4%85skiego"
+                                    title="Flaga województwa dolnośląskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_dolno%C5%9Bl%C4%85skie"
+                                title="Województwo dolnośląskie">dolnośląskie</a>
+                        </td>
+                        <td><a href="/wiki/Wroc%C5%82aw" title="Wrocław">Wrocław</a>
+                        </td>
+                        <td>19 946,70
+                        </td>
+                        <td>2 883 133
+                        </td>
+                        <td>144,54
+                        </td>
+                        <td>93
+                        </td>
+                        <td>26
+                        </td>
+                        <td>4
+                        </td>
+                        <td>169
+                        </td>
+                        <td>35
+                        </td>
+                        <td>58
+                        </td>
+                        <td>76
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_kujawsko-pomorskiego"
+                                    title="Herb województwa kujawsko-pomorskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_kujawsko-pomorskiego"
+                                    title="Flaga województwa kujawsko-pomorskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_kujawsko-pomorskie"
+                                title="Województwo kujawsko-pomorskie">kujawsko-pomorskie</a>
+                        </td>
+                        <td><a href="/wiki/Bydgoszcz" title="Bydgoszcz">Bydgoszcz</a> i&nbsp;<a href="/wiki/Toru%C5%84"
+                                title="Toruń">Toruń</a>
+                        </td>
+                        <td>17 971,34
+                        </td>
+                        <td>2 001 670
+                        </td>
+                        <td>111,38
+                        </td>
+                        <td>56
+                        </td>
+                        <td>19
+                        </td>
+                        <td>4
+                        </td>
+                        <td>144
+                        </td>
+                        <td>17
+                        </td>
+                        <td>39
+                        </td>
+                        <td>88
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_lubelskiego"
+                                    title="Herb województwa lubelskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_lubelskiego"
+                                    title="Flaga województwa lubelskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_lubelskie" title="Województwo lubelskie">lubelskie</a>
+                        </td>
+                        <td><a href="/wiki/Lublin" title="Lublin">Lublin</a>
+                        </td>
+                        <td>25 122,46
+                        </td>
+                        <td>2 017 807
+                        </td>
+                        <td>80,32
+                        </td>
+                        <td>54
+                        </td>
+                        <td>20
+                        </td>
+                        <td>4
+                        </td>
+                        <td>213
+                        </td>
+                        <td>20
+                        </td>
+                        <td>34
+                        </td>
+                        <td>159
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_lubuskiego"
+                                    title="Herb województwa lubuskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_lubuskiego"
+                                    title="Flaga województwa lubuskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_lubuskie" title="Województwo lubuskie">lubuskie</a>
+                        </td>
+                        <td><a href="/wiki/Gorz%C3%B3w_Wielkopolski" title="Gorzów Wielkopolski">Gorzów Wielkopolski</a>
+                            i&nbsp;<a href="/wiki/Zielona_G%C3%B3ra" title="Zielona Góra">Zielona Góra</a>
+                        </td>
+                        <td>13 987,93
+                        </td>
+                        <td>977 493
+                        </td>
+                        <td>69,88
+                        </td>
+                        <td>44
+                        </td>
+                        <td>12
+                        </td>
+                        <td>2
+                        </td>
+                        <td>82
+                        </td>
+                        <td>9
+                        </td>
+                        <td>35
+                        </td>
+                        <td>38
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_%C5%82%C3%B3dzkiego"
+                                    title="Herb województwa łódzkiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_%C5%82%C3%B3dzkiego"
+                                    title="Flaga województwa łódzkiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_%C5%82%C3%B3dzkie" title="Województwo łódzkie">łódzkie</a>
+                        </td>
+                        <td><a href="/wiki/%C5%81%C3%B3d%C5%BA" title="Łódź">Łódź</a>
+                        </td>
+                        <td>18 218,95
+                        </td>
+                        <td>2 370 370
+                        </td>
+                        <td>130,10
+                        </td>
+                        <td>60
+                        </td>
+                        <td>21
+                        </td>
+                        <td>3
+                        </td>
+                        <td>177
+                        </td>
+                        <td>18
+                        </td>
+                        <td>42
+                        </td>
+                        <td>117
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_dolno%C5%9Bl%C4%85skiego"
+                                    title="Herb województwa dolnośląskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_dolno%C5%9Bl%C4%85skiego"
+                                    title="Flaga województwa dolnośląskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_dolno%C5%9Bl%C4%85skie"
+                                title="Województwo dolnośląskie">dolnośląskie</a>
+                        </td>
+                        <td><a href="/wiki/Wroc%C5%82aw" title="Wrocław">Wrocław</a>
+                        </td>
+                        <td>19 946,70
+                        </td>
+                        <td>2 883 133
+                        </td>
+                        <td>144,54
+                        </td>
+                        <td>93
+                        </td>
+                        <td>26
+                        </td>
+                        <td>4
+                        </td>
+                        <td>169
+                        </td>
+                        <td>35
+                        </td>
+                        <td>58
+                        </td>
+                        <td>76
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_kujawsko-pomorskiego"
+                                    title="Herb województwa kujawsko-pomorskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_kujawsko-pomorskiego"
+                                    title="Flaga województwa kujawsko-pomorskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_kujawsko-pomorskie"
+                                title="Województwo kujawsko-pomorskie">kujawsko-pomorskie</a>
+                        </td>
+                        <td><a href="/wiki/Bydgoszcz" title="Bydgoszcz">Bydgoszcz</a> i&nbsp;<a href="/wiki/Toru%C5%84"
+                                title="Toruń">Toruń</a>
+                        </td>
+                        <td>17 971,34
+                        </td>
+                        <td>2 001 670
+                        </td>
+                        <td>111,38
+                        </td>
+                        <td>56
+                        </td>
+                        <td>19
+                        </td>
+                        <td>4
+                        </td>
+                        <td>144
+                        </td>
+                        <td>17
+                        </td>
+                        <td>39
+                        </td>
+                        <td>88
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_lubelskiego"
+                                    title="Herb województwa lubelskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_lubelskiego"
+                                    title="Flaga województwa lubelskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_lubelskie" title="Województwo lubelskie">lubelskie</a>
+                        </td>
+                        <td><a href="/wiki/Lublin" title="Lublin">Lublin</a>
+                        </td>
+                        <td>25 122,46
+                        </td>
+                        <td>2 017 807
+                        </td>
+                        <td>80,32
+                        </td>
+                        <td>54
+                        </td>
+                        <td>20
+                        </td>
+                        <td>4
+                        </td>
+                        <td>213
+                        </td>
+                        <td>20
+                        </td>
+                        <td>34
+                        </td>
+                        <td>159
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_lubuskiego"
+                                    title="Herb województwa lubuskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_lubuskiego"
+                                    title="Flaga województwa lubuskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_lubuskie" title="Województwo lubuskie">lubuskie</a>
+                        </td>
+                        <td><a href="/wiki/Gorz%C3%B3w_Wielkopolski" title="Gorzów Wielkopolski">Gorzów Wielkopolski</a>
+                            i&nbsp;<a href="/wiki/Zielona_G%C3%B3ra" title="Zielona Góra">Zielona Góra</a>
+                        </td>
+                        <td>13 987,93
+                        </td>
+                        <td>977 493
+                        </td>
+                        <td>69,88
+                        </td>
+                        <td>44
+                        </td>
+                        <td>12
+                        </td>
+                        <td>2
+                        </td>
+                        <td>82
+                        </td>
+                        <td>9
+                        </td>
+                        <td>35
+                        </td>
+                        <td>38
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_%C5%82%C3%B3dzkiego"
+                                    title="Herb województwa łódzkiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_%C5%82%C3%B3dzkiego"
+                                    title="Flaga województwa łódzkiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_%C5%82%C3%B3dzkie" title="Województwo łódzkie">łódzkie</a>
+                        </td>
+                        <td><a href="/wiki/%C5%81%C3%B3d%C5%BA" title="Łódź">Łódź</a>
+                        </td>
+                        <td>18 218,95
+                        </td>
+                        <td>2 370 370
+                        </td>
+                        <td>130,10
+                        </td>
+                        <td>60
+                        </td>
+                        <td>21
+                        </td>
+                        <td>3
+                        </td>
+                        <td>177
+                        </td>
+                        <td>18
+                        </td>
+                        <td>42
+                        </td>
+                        <td>117
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_dolno%C5%9Bl%C4%85skiego"
+                                    title="Herb województwa dolnośląskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_dolno%C5%9Bl%C4%85skiego"
+                                    title="Flaga województwa dolnośląskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_dolno%C5%9Bl%C4%85skie"
+                                title="Województwo dolnośląskie">dolnośląskie</a>
+                        </td>
+                        <td><a href="/wiki/Wroc%C5%82aw" title="Wrocław">Wrocław</a>
+                        </td>
+                        <td>19 946,70
+                        </td>
+                        <td>2 883 133
+                        </td>
+                        <td>144,54
+                        </td>
+                        <td>93
+                        </td>
+                        <td>26
+                        </td>
+                        <td>4
+                        </td>
+                        <td>169
+                        </td>
+                        <td>35
+                        </td>
+                        <td>58
+                        </td>
+                        <td>76
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_kujawsko-pomorskiego"
+                                    title="Herb województwa kujawsko-pomorskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_kujawsko-pomorskiego"
+                                    title="Flaga województwa kujawsko-pomorskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_kujawsko-pomorskie"
+                                title="Województwo kujawsko-pomorskie">kujawsko-pomorskie</a>
+                        </td>
+                        <td><a href="/wiki/Bydgoszcz" title="Bydgoszcz">Bydgoszcz</a> i&nbsp;<a href="/wiki/Toru%C5%84"
+                                title="Toruń">Toruń</a>
+                        </td>
+                        <td>17 971,34
+                        </td>
+                        <td>2 001 670
+                        </td>
+                        <td>111,38
+                        </td>
+                        <td>56
+                        </td>
+                        <td>19
+                        </td>
+                        <td>4
+                        </td>
+                        <td>144
+                        </td>
+                        <td>17
+                        </td>
+                        <td>39
+                        </td>
+                        <td>88
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_lubelskiego"
+                                    title="Herb województwa lubelskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_lubelskiego"
+                                    title="Flaga województwa lubelskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_lubelskie" title="Województwo lubelskie">lubelskie</a>
+                        </td>
+                        <td><a href="/wiki/Lublin" title="Lublin">Lublin</a>
+                        </td>
+                        <td>25 122,46
+                        </td>
+                        <td>2 017 807
+                        </td>
+                        <td>80,32
+                        </td>
+                        <td>54
+                        </td>
+                        <td>20
+                        </td>
+                        <td>4
+                        </td>
+                        <td>213
+                        </td>
+                        <td>20
+                        </td>
+                        <td>34
+                        </td>
+                        <td>159
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_lubuskiego"
+                                    title="Herb województwa lubuskiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_lubuskiego"
+                                    title="Flaga województwa lubuskiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_lubuskie" title="Województwo lubuskie">lubuskie</a>
+                        </td>
+                        <td><a href="/wiki/Gorz%C3%B3w_Wielkopolski" title="Gorzów Wielkopolski">Gorzów Wielkopolski</a>
+                            i&nbsp;<a href="/wiki/Zielona_G%C3%B3ra" title="Zielona Góra">Zielona Góra</a>
+                        </td>
+                        <td>13 987,93
+                        </td>
+                        <td>977 493
+                        </td>
+                        <td>69,88
+                        </td>
+                        <td>44
+                        </td>
+                        <td>12
+                        </td>
+                        <td>2
+                        </td>
+                        <td>82
+                        </td>
+                        <td>9
+                        </td>
+                        <td>35
+                        </td>
+                        <td>38
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span typeof="mw:File"><a href="/wiki/Herb_wojew%C3%B3dztwa_%C5%82%C3%B3dzkiego"
+                                    title="Herb województwa łódzkiego"></a></span>
+                        </td>
+                        <td><span class="mw-image-border" typeof="mw:File"><a
+                                    href="/wiki/Flaga_wojew%C3%B3dztwa_%C5%82%C3%B3dzkiego"
+                                    title="Flaga województwa łódzkiego"></a></span>
+                        </td>
+                        <td><a href="/wiki/Wojew%C3%B3dztwo_%C5%82%C3%B3dzkie" title="Województwo łódzkie">łódzkie</a>
+                        </td>
+                        <td><a href="/wiki/%C5%81%C3%B3d%C5%BA" title="Łódź">Łódź</a>
+                        </td>
+                        <td>18 218,95
+                        </td>
+                        <td>2 370 370
+                        </td>
+                        <td>130,10
+                        </td>
+                        <td>60
+                        </td>
+                        <td>21
+                        </td>
+                        <td>3
+                        </td>
+                        <td>177
+                        </td>
+                        <td>18
+                        </td>
+                        <td>42
+                        </td>
+                        <td>117
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+
+        <!-- Your interactive elements like tables or nested lists will go here -->
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
